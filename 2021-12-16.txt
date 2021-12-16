@@ -1,0 +1,28 @@
+-- TABLE: cliente
+CREATE TABLE `cliente` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
+INSERT INTO `cliente` (`id`, `nome`) VALUES ('1', 'cassoli');
+INSERT INTO `cliente` (`id`, `nome`) VALUES ('2', 'henriqye');
+
+-- TABLE: enquete
+CREATE TABLE `enquete` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `enquete_id` int(11) NOT NULL,
+  `votos` int(11) NOT NULL,
+  `resposta` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
+INSERT INTO `enquete` (`id`, `enquete_id`, `votos`, `resposta`) VALUES ('1', '1', '3', 'Powerlifting');
+INSERT INTO `enquete` (`id`, `enquete_id`, `votos`, `resposta`) VALUES ('2', '1', '1', 'Rugby');
+
+-- TABLE: pergunta_enquete
+CREATE TABLE `pergunta_enquete` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `pergunta` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
+INSERT INTO `pergunta_enquete` (`id`, `pergunta`) VALUES ('1', 'Qual seu esporte favorito?');
+
